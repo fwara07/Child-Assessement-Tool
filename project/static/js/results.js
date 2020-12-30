@@ -21,6 +21,7 @@ resultText.innerText =
   category.slice(1) +
   " Rating is " +
   avg.toString();
+
 if (avg <= 10 && avg > 7) {
   assessement.innerHTML = "Ranking is " + "<strong>" + rating[0] + "</strong>";
 } else if (avg <= 7 && avg > 4) {

@@ -58,8 +58,10 @@
             <div class="container has-text-centered">
                {% block content %}
                <div id="home" class="flex-column flex-center">
-				   <p class="is-size-1 mb-4">Child Assessement Tool</p>
-					<p class="is-size-4 mb-4 has-text-weight-medium">Here at Watoto Rescue Association, we strive to make the world a better place for all children. <br> This tool is used to properly assess all aspects of a child's life.</p>
+				    <p class="is-size-1 mb-4">Child Assessement Tool</p>
+				    <div class="introduction">
+						<p class="is-size-4 mb-4 has-text-weight-medium">Here at Watoto Rescue Association, we strive to make the world a better place for all children. This tool is used to properly assess all aspects of a child's life.</p>
+			   		</div>
 					<div class="box">
 						<a href=" {{ url_for('main.tool') }}" class="button is-info mx-1 my-2" id="safety">Safety Assessement</a>
 						<a href=" {{ url_for('main.tool') }}" class="button is-info mx-1 my-2" id="security">Security Assessement</a>

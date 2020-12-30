@@ -229,9 +229,11 @@ function selectAnswer(e) {
   var num = selectedButton.dataset.num;
   allNumbers.push(num);
   setStatusClass(document.body, num);
+
   Array.from(answerButton.children).forEach((button) => {
     setStatusClass(button);
   });
+
   if (questionsArray.length > currentQuestionIndex + 1) {
     nextButton.classList.remove("is-hidden");
     console.log("nexxxxtttt");
@@ -256,7 +258,7 @@ function clearStateClass(element) {
   element.classList.remove("is-hidden");
 }
 
-function backButton() {
+function backBtn() {
   window.location.assign("/home");
 }
 

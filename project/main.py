@@ -1,25 +1,27 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import login_required, current_user
 from . import db
 
-main = Blueprint('main', __name__)
+main = Blueprint("main", __name__)
 
 
-@main.route('/')
+@main.route("/")
 def index():
-    return render_template('index.html')
+    if current_user.is_authenticated:
+        return redirect(url_for("main.home"))
+    return render_template("index.html")
 
 
-@main.route('/tool')
+@main.route("/tool")
 def tool():
-    return render_template('tool.html')
+    return render_template("tool.html")
 
 
-@main.route('/home')
+@main.route("/home")
 def home():
-    return render_template('home.html')
+    return render_template("home.html")
 
 
-@main.route('/results')
+@main.route("/results")
 def results():
-    return render_template('results.html')
+    return render_template("results.html")

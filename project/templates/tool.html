@@ -34,7 +34,10 @@
         </div>
       </div>
       <button id="next-btn" class="button is-rounded is-outlined is-primary is-medium is-hidden">Next</button>
-      <button id="score-btn" class="button is-rounded is-outlined is-primary is-medium is-hidden"><a href="{{ url_for('main.results') }}">Results</a></button>
+      <button id="score-btn" class="button is-rounded is-outlined is-primary is-medium is-hidden" onclick=getResults()>Results</button>
+    </div>
+    <div>
+      <button id="back" class="button is-rounded is-danger is-medium" onclick=backButton()>Back</button>
     </div>
   </div>
 {% endblock %}
